@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-vRd = float(input("Ingrese el radio de la circunferencia: "))
+vRadio = float(input("Ingrese el radio de la circunferencia: "))
 pi= 3.14
-Long = 2 * pi * vRd
-Ar = pi * (vRd**2)
-print("El total de la longitud de la circunferencia es: ", Long)
-print("El total del area de la circunferencia es: ", Ar)
+Longitud = 2 * pi * vRd
+Area = pi * (vRd**2)
+print("El total de la longitud de la circunferencia es: ", Longitud)
+print("El total del area de la circunferencia es: ", Area)
