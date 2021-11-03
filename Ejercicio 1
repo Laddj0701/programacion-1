@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-vBs = float(input("Ingrese la base del triangulo: "))
-vAl = float(input("Ingrese la altura del triangulo: "))
-Area  = 1/2 * (vBs * vAl)
+vBase = float(input("Ingrese la base del triangulo: "))
+vAltura = float(input("Ingrese la altura del triangulo: "))
+Area  = 1/2 * (vBase * vAltura)
 print ("El total del area del triangulo es: ", Area)
