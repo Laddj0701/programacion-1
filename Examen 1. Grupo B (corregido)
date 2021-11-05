@@ -1,0 +1,26 @@
+#!/usr/bin/python3
+
+def Conteo_Vocales (vocales):
+    contador_a = 0
+    contador_e = 0
+    contador_i = 0
+    contador_o = 0
+    contador_u = 0
+
+    for vocal in vocales:
+        if vocal.lower() in "aAáÁ":
+            contador_a += 1
+        if vocal.lower() in "eEéÉ":
+            contador_e += 1
+        if vocal.lower() in "iIíÍ":
+            contador_i += 1
+        if vocal.lower() in "oOóÓ":
+            contador_o += 1
+        if vocal.lower() in "uUúÚ":
+            contador_u += 1
+    return contador_a, contador_e, contador_i, contador_o, contador_u
+
+vocales =  "Bnos. tardes Estimados Estudiantes. No olviden el uso del hashtag #teleprgm1 en el asunto de los correos en esta materia. Las consultas, por el grupo de whatsapp o exclusivamente al correo con el hashtag: #teleprgm1_cnslt. Por favor, no omitan esta práctica, de lo contrario, corremos el riesgo # de que sus comunicaciones se pierdan. Agradecido por la comprensión." 
+total_vocales = Conteo_Vocales (vocales)
+print ("En el texto hay un total de:",total_vocales)
+print ("El orden de las vocales es: a, e, i, o, u")
