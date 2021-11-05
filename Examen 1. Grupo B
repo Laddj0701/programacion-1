@@ -1,0 +1,12 @@
+#!/usr/bin/python3
+
+def Conteo_Vocales (vocales):
+    contador = 0
+    for vocal in vocales:
+        if vocal.lower() in "aeiouáéíóúAEIUOÁÉÍÓÚ":
+            contador += 1
+    return contador
+
+vocales =  "Bnos. tardes Estimados Estudiantes. No olviden el uso del hashtag #teleprgm1 en el asunto de los correos en esta materia. Las consultas, por el grupo de whatsapp o exclusivamente al correo con el hashtag: #teleprgm1_cnslt. Por favor, no omitan esta práctica, de lo contrario, corremos el riesgo # de que sus comunicaciones se pierdan. Agradecido por la comprensión." 
+total_vocales = Conteo_Vocales (vocales)
+print ("En el texto hay un total de:",total_vocales,"vocales" )
