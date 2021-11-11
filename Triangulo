@@ -1,0 +1,47 @@
+#! / usr / bin / python3
+
+class rectangulo:
+    # constructor de la clase. Se ejecuta
+    # cuando la instanciamos
+    def  __init__ ( self , altura , ancho ):
+        print ( "Instanciando esta clase" )
+
+        # Atributos
+        self.altura  =  altura
+        self.ancho  =  ancho
+
+        # Metodos
+    def  muestraElAncho ( self ):
+        print ( "el ancho del rectangulo es:" , self . ancho )
+
+    def  muestraLaAltura ( self ):
+        print ( "la altura del rectangulo es:" , self . altura )
+
+    #atributos
+    def  calculaLaSuperficie ( self , altura , ancho ):
+        vResult  =  0
+        self.altura = altura
+        self.ancho = ancho
+
+    #metodo
+    def muestraElArea (self):
+
+        vResult = 1/2 * (self.ancho * self.altura)
+
+        print ("El area del triangulo es: ",vResult)
+        return  vResult
+
+# clase triangulo:
+triangulo = rectangulo ( 2 , 3 )
+triangulo . muestraElArea ()
+
+
+# vamos a instanciar la clase rectangulo
+# tantas veces como rectangulos necesitemos
+rectángulo1  =  rectangulo ( 12 , 3 )
+rectángulo1 . muestraElAncho ()
+
+# vamos a instanciar el
+# segundo rectángulo
+rectángulo2  =  rectangulo ( 4 , 9 )
+rectángulo2 . muestraLaAltura ()
