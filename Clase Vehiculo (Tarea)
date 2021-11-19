@@ -1,0 +1,87 @@
+class Vehiculo:  # clase mas abstracta
+    # este es el constructor de la clase
+    def __init__(self, marca, modelo, anio):
+        self.marca = marca
+        self.modelo = modelo
+        self.anio = anio
+        print("Vehiculo Creado")
+
+    def encender(self):
+        print("Estoy listo para llevarte")
+        
+    def arrancar(self):
+        print("Ya podemos avanzar")
+
+
+class Automovil(Vehiculo):  # herencia simple: Automovil extiende a Vehiculo
+    __galonesGasolina = 0
+    transmisionManual = True
+
+    def encender(self):  # ejemplo de Polimorfismo - overriding
+        print("Listo para llevarte en este", self.modelo)
+        
+#Overriding del metodo arrancar    
+    def arrancar(self):
+        print("raaahh rahh!!")
+
+    def tocarCorneta(self):
+        print("beep beep!")
+
+    def echarGasolina(self, vGalones):  # Encapsulamiento - esto es un setter
+        if vGalones <= 1:
+            print("con un solo galon, no llegas a ninguna parte")
+        else:
+            self.__galonesGasolina = vGalones
+
+    def cuantaGasolinaHay(self):  # Encapsulamiento - esto es un getter
+        print("Ud. tiene:", self.__galonesGasolina, "galones de Gasolina")
+
+# herencia de la clase padre
+class Barco(Vehiculo):
+    __longituddelbarco = 0
+    
+    def tipocombustible(self):
+        print ("Este barco utiliza combustible líquido")
+    
+#Encapsulamiento. Getter
+    def esloradelbarco(self):
+        print("Este barco mide", self.__longituddelbarco,"m")
+        
+#Encapsulamiento. Setter
+    def eslora(self, vlongitud):     
+        if vlongitud <= 20:
+            print("El barco no puede navegar por el oceano")
+        else:
+            print("El barco puede navegar por el oceano")
+            self.__longituddelbarco = vlongitud
+    
+    def anchura(self, ancho):
+        print("Este barco tiene una anchura de", ancho, "m")
+    
+    def tipopropulsion(self, propulsion):
+        print("Este barco utiliza", propulsion, "para poder desplazarse")
+        
+# Ejercicio 5pts.
+# Instancie otro objeto.
+# 1.- Haga herencia de la clase padre
+# 2.- Necesito mas especificidad en la administracion del atributo __galonesGasolina
+# 3.- Defina un nvo. atributo protegido.  Defina la administracion del acceso a ese atributo.
+# 4.- Haga overriding del metodo arrancar.
+
+
+# instanciando la clase Vehiculo-Automovil
+miCarro = Automovil("Chevrolet", "Aveo", "2015")
+miCarro.encender()
+miCarro.tocarCorneta()
+miCarro.arrancar()
+miCarro.cuantaGasolinaHay()
+miCarro.echarGasolina(100)
+miCarro.cuantaGasolinaHay()
+print("\n")
+# instanciando otro objeto
+miBarco = Barco ("submarino", "submarino", "2020")
+miBarco.tipocombustible()
+miBarco.eslora(40)
+miBarco.esloradelbarco()
+miBarco.anchura(60)
+miBarco.tipopropulsion("disel")
