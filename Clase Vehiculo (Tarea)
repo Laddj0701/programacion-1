@@ -1,7 +1,4 @@
-class Vehiculo:  # clase mas abstracta
-    # este es el constructor de la clase
-    def __init__(self, marca, modelo, anio):
-        self.marca = marca
+
         self.modelo = modelo
         self.anio = anio
         print("Vehiculo Creado")
@@ -61,20 +58,7 @@ class Barco(Vehiculo):
     def tipopropulsion(self, propulsion):
         print("Este barco utiliza", propulsion, "para poder desplazarse")
         
-# Ejercicio 5pts.
-# Instancie otro objeto.
-# 1.- Haga herencia de la clase padre
-# 2.- Necesito mas especificidad en la administracion del atributo __galonesGasolina
-# 3.- Defina un nvo. atributo protegido.  Defina la administracion del acceso a ese atributo.
-# 4.- Haga overriding del metodo arrancar.
-
-
-# instanciando la clase Vehiculo-Automovil
-miCarro = Automovil("Chevrolet", "Aveo", "2015")
-miCarro.encender()
-miCarro.tocarCorneta()
-miCarro.arrancar()
-miCarro.cuantaGasolinaHay()
+# Ejerc
 miCarro.echarGasolina(100)
 miCarro.cuantaGasolinaHay()
 print("\n")
@@ -83,5 +67,3 @@ miBarco = Barco ("submarino", "submarino", "2020")
 miBarco.tipocombustible()
 miBarco.eslora(40)
 miBarco.esloradelbarco()
-miBarco.anchura(60)
-miBarco.tipopropulsion("disel")
