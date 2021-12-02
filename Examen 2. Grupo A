@@ -1,0 +1,89 @@
+class Figuras:
+     def __init__(self, radio, base, altura):
+        self.radio = radio
+        self.base = base
+        self.altura = altura
+        print("Creando figura")
+    
+class Circulo(Figuras):
+     __TipodeFigura = "circulo"
+     
+#Encapsulamiento. Getter
+     def Figura(self):
+        print("Esta figura es", self. __TipodeFigura)
+        
+#Encapsulamiento. Setter
+     def Vertices(self):
+         Tipofigura = self.__TipodeFigura 
+         
+         if Tipofigura == "circulo":
+            print("Esta figura no tiene vertices")
+         else:
+            print("Esta figura no puede ser un circulo")
+         
+     def Color (self, ColorCirculo):
+        print("El color del circulo es: ", ColorCirculo)
+        
+     def Perimetro (self):
+        if self.radio < 0:
+            print("Esta operacion no se puede realizar")
+        elif self.radio > 0:
+            PerimetroCirculo = (2 * 3.14 * self.radio)
+            print("El primetro del circulo es:", PerimetroCirculo)
+     
+     def Area(self):
+        if self.radio < 0:
+            print("Esta operacion no se puede realizar")
+        elif self.radio > 0:
+            AreaCirculo = (3.14  * (self.radio ** 2 ))
+            print("El area del circulo es:", AreaCirculo)
+        
+class Triangulo(Figuras):
+     __TipodeFigura = "triangulo"
+     
+#Encapsulamiento. Getter
+     def Figura(self):
+         print("Esta figura es", self. __TipodeFigura)
+        
+#Encapsulamiento. Setter
+     def Vertices(self):
+         Tipofigura = self.__TipodeFigura 
+         
+         if Tipofigura == "triangulo":
+            print("Esta figura tiene 3 vertices")
+         else:
+            print("Esta figura no puede ser un triangulo")
+            
+     def Color (self, ColorTriangulo):
+        print("El color del triangulo es: ", ColorTriangulo)
+    
+     def Perimetro (self, lado1, lado2):
+        if self.base < 0 and lado1 < 0 and lado2 < 0:
+            print("Esta operacion no se puede realizar")
+        elif self.base < 0 and lado1 < 0 and lado2 < 0:
+            PerimetroTriangulo = (self.base + lado1 + lado2)
+            print("El primetro del triangulo es:", PerimetroTriangulo)
+     
+     def Area(self):
+        if self.base < 0 and self.altura < 0:
+            print("Esta operacion no se puede realizar")
+        elif self.base < 0 and self.altura < 0:
+            AreaTriangulo = (1 / 2  * (  self.base * self.altura))
+            print("El area del triangulo es:", AreaTriangulo)
+        
+
+
+# instanciando las figuras
+miCirculo = Circulo (4, -5, 6)
+miCirculo.Figura()
+miCirculo.Vertices()
+miCirculo.Color("Azul")
+miCirculo.Perimetro()
+miCirculo.Area()
+print("\n")
+miTriangulo = Triangulo (4, 5, 6)
+miTriangulo.Figura()
+miTriangulo.Vertices()
+miTriangulo.Color("Azul")
+miTriangulo.Perimetro(6, 8)
+miTriangulo.Area()
