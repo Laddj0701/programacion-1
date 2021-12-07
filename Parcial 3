@@ -1,0 +1,84 @@
+class Cuentas:
+    def __init__(self, nombre, apellido):
+        self.nombre= nombre
+        self.apellido= apellido
+        
+        print("El titular de la cuenta es", self.nombre, self.apellido)
+    
+    __totalsaldo= 5000
+    __tipo_cuenta= "Ahorro"
+     
+#Encapsulamiento. Getter
+    def consulta_saldo(self):
+        print("su saldo es de", self. __totalsaldo)
+
+    def depositar (self, saldo):
+        deposito= "no"
+        monto_deposito= 500
+        total_deposito= 0
+        
+        if deposito == "si":
+            print("Ingrese el monto a depositar: ", monto_deposito)
+            total_deposito= saldo + monto_deposito
+            print("Ahora su saldo es: ", total_deposito)
+        else:
+            print("no va adepositar")
+        
+    def retirar (self, saldo):
+        retiro= "no"
+        monto_retiro= 500
+        total_retiro= 0
+        
+        if retiro == "si":
+            print("Ingrese el monto a depositar: ", monto_retiro)
+            total_retiro= saldo - monto_retiro
+            print("Ahora su saldo es: ", total_retiro)
+        else:
+            print("no va adepositar")
+       
+    def abonoIntereses (self, capital_inicial, tasa, tiempo):
+        
+        TipoDeCuenta= self.__tipo_cuenta
+        intereses_a_Pagar= 0
+        
+        if TipoDeCuenta == "Ahorro":
+            print("su cuenta es de tipo:", TipoDeCuenta)
+            intereses_a_Pagar = capital_inicial * tasa * tiempo
+            print("El bono de interes a pagar es de:", intereses_a_Pagar)
+        else:
+            print("El bono de interes a pagar no a cambiado, es el mismo")
+
+class plazo_fijo(Cuentas):
+    
+    __tipo_cuenta= "Ahorro"
+    
+    def PlazoFijo(self):
+         TipoDeCuenta= self.__tipo_cuenta
+         saldo= 500
+         intereses_a_pagar= 700000
+         abono= float(0)
+         total= float(0)
+         
+         if TipoDeCuenta == "Ahorro":
+            print("su cuenta es de tipo:", TipoDeCuenta)
+            abono = (saldo * 0.10) + intereses_a_pagar
+            print("El total es :", abono)
+         else:
+            print("Usted no pertenece al plazo fijo")
+
+class ahorro(Cuentas):
+     print("Su cuenta es de ahorro")
+    
+cuenta1= plazo_fijo ("Lisbeth", "Dias")
+cuenta1.consulta_saldo()
+cuenta1.depositar(400)
+cuenta1.retirar(5000)
+cuenta1.abonoIntereses(5000, 20, 7)
+cuenta1.PlazoFijo()
+print("\n")
+cuenta2= ahorro ("Lisbeth", "Dias")
+cuenta2.consulta_saldo()
+cuenta2.depositar(400)
+cuenta2.retirar(5000)
+cuenta2.abonoIntereses(5000, 20, 7)
+print("\n")
